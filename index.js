@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown'); // Adjust the path based on your project structure
+const generateMarkdown = require('./utils/generateMarkdown'); 
 
 // Packages needed for this application
 // const inquirer = require('inquirer');
@@ -23,22 +23,22 @@ const questions = [
   {
     type: 'input',
     name: 'installation',
-    message: 'Provide installation instructions?',
+    message: 'Provide installation instructions:',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'Provide steps of usage for this application?',
+    message: 'Provide steps of usage for this application:',
   },
   {
     type: 'input',
     name: 'contributing',
-    message: 'Provide contributing information?',
+    message: 'Provide contributing information:',
   },
   {
     type: 'input',
     name: 'tests',
-    message: 'Provide tests commands and intructions ?',
+    message: 'Provide tests commands and intructions:',
   },
   {
     type: 'input',
@@ -53,10 +53,25 @@ const questions = [
   },
 ];
 
+function fileNamePrompt(data) {
+  inquirer
+    .prompt([
+      {
+        type: 'input',
+        name: 'fileName',
+        message: 'Enter the desired file name (including extension, e.g., README.md):',
+      },
+    ])
+    .then((answer) => {
+      const fileName = answer.fileName.trim() || 'README.md'; // Default to README.md if no input
+      writeToFile(fileName, data); // Correct function call
+    });
+}
+
 // Function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('README.md generated successfully!')
+    err ? console.error(err) : console.log(`${fileName} generated successfully!`)
   );
 }
 
@@ -64,7 +79,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     const markdown = generateMarkdown(answers);
-    writeToFile('README.md', markdown);
+    fileNamePrompt(markdown); // Correct function call
   });
 }
 

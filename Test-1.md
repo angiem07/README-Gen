@@ -1,9 +1,9 @@
-# Test-2
+# Test Title
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Test short description
+Descriptions
 
 ## Table of Contents
 - [Installation](#installation)
@@ -14,19 +14,19 @@ Test short description
 [License](https://opensource.org/licenses/MIT)
 
 ## Installation
-Test instructions
+Install Instructions
 
 ## Usage
-Test usage steps
+Steps of usage
 
 ## Contributing
-N/a
+Contact
 
 ## Tests
-N/a
+Tests
 
 ## Questions
-For questions about the project, contact git-user email@gmail.com.
+For questions about the project, contact email@gmail.com.
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](https://opensource.org/licenses/MIT) file for details.
