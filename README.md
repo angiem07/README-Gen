@@ -5,7 +5,14 @@ Module 9 Challenge
 This generator was created to assist developers to quickly create a professional README for a new project.
 
 ## Usage
+First open repo in VS Code.
+Then in the terminal start application in node.js by entering 'node index.js'
+You'll be prompted a series of questions.
+Finally your readme will be created in the same direcotry as your repo.
+
 See video below:
+
+
 
 ## Credits
 Original code provided by UTA Bootcamp.
@@ -14,7 +21,8 @@ References: \
 https://github.com/omarwright07/pro-readme-generator/tree/main \
 https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide \
 https://www.w3schools.com/js/js_if_else.asp \
-https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
+https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts \
+https://www.npmjs.com/package/inquirer/v/8.2.4
 
 Debug: \
 ChatGPT
