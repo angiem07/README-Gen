@@ -13,6 +13,10 @@ Finally your readme will be created in the same direcotry as your repo.
 See video below:
 
 
+https://github.com/angiem07/README-Gen/assets/143362421/40ee596b-72a4-4cbe-868e-e5cdef46ce5d
+
+
+
 
 ## Credits
 Original code provided by UTA Bootcamp.
