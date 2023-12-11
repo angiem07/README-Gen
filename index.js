@@ -2,19 +2,14 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown'); 
 
-// Packages needed for this application
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const generateMarkdown = require('./generateMarkdown');
-
-// Array of questions for user input
+// Prompt questions
 const questions = [
   {
     type: 'input',
     name: 'title',
     message: 'Provide a title for you project?',
   },
-  // Add more questions for other project details
+  
   {
     type: 'input',
     name: 'description',
@@ -28,12 +23,12 @@ const questions = [
   {
     type: 'input',
     name: 'usage',
-    message: 'Provide steps of usage for this application:',
+    message: 'Provide usage steps for this application:',
   },
   {
     type: 'input',
     name: 'contributing',
-    message: 'Provide contributing information:',
+    message: 'Provide contribution information:',
   },
   {
     type: 'input',
@@ -43,7 +38,12 @@ const questions = [
   {
     type: 'input',
     name: 'email',
-    message: 'Provide your GitHub username and/or email address?',
+    message: 'Provide your email address:',
+  },
+  {
+  type: 'input',
+    name: 'gituser',
+    message: 'Provide your GitHub username:',
   },
   {
     type: 'list',
@@ -64,7 +64,7 @@ function fileNamePrompt(data) {
     ])
     .then((answer) => {
       const fileName = answer.fileName.trim() || 'README.md'; // Default to README.md if no input
-      writeToFile(fileName, data); // Correct function call
+      writeToFile(fileName, data); 
     });
 }
 
